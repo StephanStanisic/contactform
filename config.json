@@ -1,0 +1,73 @@
+{
+    ////////////////////////////////////////////////////////////////////////////
+    /// FORM CONFIG
+    ////////////////////////////////////////////////////////////////////////////
+
+    // Here you can customize the form. Set a field to something falsy to disable it
+    // Remove the captcha elemnent to disable the check.
+    "fields": {
+        "name": "text",
+        "email": "email",
+        "category": [
+            "Billing",
+            "Technical support"
+        ],
+        "message": "textarea"
+    },
+
+    // Replace shortcode. This text will be replaced with the form on CMS pages
+    "shortcode": "[contact_form]",
+
+    // Text in the submit button.
+    "submit_value": "Submit form",
+
+    // Class of the submit button (simple styling, customize your theme's style.css)
+    // to create more elaborate styles. (See https://getbootstrap.com/docs/3.3/css/#buttons-options)
+    "submit_class": "btn btn-primary",
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    /// EMAIL CONFIG
+    ////////////////////////////////////////////////////////////////////////////
+
+    // Do you want to send an email for each submission?
+    "send_emails": true,
+
+    // [name, mail]
+    "from": ["Example mailer", "mailer@example.com"],
+    "to": [["Administrator", "you@example.com"]],
+
+    // Send an copy to the user who filled the form. The input name has to be `email`.
+    "send_recipient": true,
+
+    // Set how you'd like to recieve emails. Possible values:
+    // html: send a formatted email
+    // plain: just send emails with no formatting
+    // json: send emails unformatted in json format.
+    "format": "html",
+
+    // The method for sending the emails. Possible values:
+    // mail: use php's `mail()` function to send emails
+    // smtp: use a smtp server to send email. Configure the smtp server below
+    "driver": "mail",
+
+    // Add your server config here
+    "smtp_config": {
+        "server": "smtp.example.com",
+        "port": 25,
+        "username": "example@example.com",
+        "password": "example123"
+    },
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    /// STORAGE CONFIG
+    ////////////////////////////////////////////////////////////////////////////
+
+    // Should submissions get stored in a folder locally?
+    "store_locally": true,
+
+    // Path to folder
+    "path": "submissions"
+
+}
