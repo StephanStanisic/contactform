@@ -20,5 +20,22 @@ This plugins requires some additional steps to work
 ## 2. Config
 The plugin folder contains a file called `config.json.example`. Copy it to `config.json` and edit the file. It is self-documented.
 
+#### On configuring the form
+In the config file you can edit the form to your liking. The configuration is as follows:
+```
+"fields": {
+    "name": "text",
+    "email": "email",
+    "category": [
+        "Billing",
+        "Technical support"
+    ],
+    "message": "textarea"
+}
+```
+It's a key-value configuration where the key is the name of the field, and the value is the type of field. So for a input element with the type of `number` you would add `"age": "number",` to the `fields` array.
+When the value is a array, the input element `select` will be used.
+_Input types checkbox and radio can't be used yet._
+
 ## 3. Add to page
-Add the shortcode for this plugin to your page. This defaults to `[contact_form]`
+Add the shortcode for this plugin to the contents of your page. This defaults to `[contact_form]`. When you sign out the shortcode will be replaced with the form.
